@@ -12,13 +12,14 @@
         android:id="@+id/textView3"
         android:layout_width="412dp"
         android:layout_height="91dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/practicum"
         android:text="Song Details"
         android:textAlignment="center"
         android:textColor="#FDFCFC"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/displayTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

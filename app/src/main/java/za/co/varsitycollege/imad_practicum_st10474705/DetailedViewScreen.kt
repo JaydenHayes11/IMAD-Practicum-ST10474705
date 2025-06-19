@@ -1,16 +1,61 @@
 package za.co.varsitycollege.imad_practicum_st10474705
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 
+
+
 class DetailedViewScreen : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_detailed_view_screen)
+
+
+
+
+
+        val songsButton = findViewById<Button>(R.id.songsDisplayButton)
+        val returnButton = findViewById<Button>(R.id.returnButton)
+        val averageButton = findViewById<Button>(R.id.averageButton)
+
+
+        averageButton.setOnClickListener {
+
+
+        }
+
+
+        songsButton?.setOnClickListener {
+            val bundle: Bundle? = intent.extras
+
+            val songString: String? = bundle?.getString("songTitle")
+            val songTitle = songString.toString()
+            val artistString: String? = bundle?.getString("artistName")
+            val artistName = artistString.toString()
+            val ratingString: String? = bundle?.getString("rating")
+            val rating = ratingString?.toInt()
+            val commentString: String? = bundle?.getString("comments")
+            val comments = commentString.toString()
+
+            val displayTextView = findViewById<TextView>(R.id.displayTextView)
+            displayTextView.text = "$songTitle,\n$artistName,\n$rating,\n$comments"
+
+
+        }
+
+
+
+        returnButton?.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -39,8 +39,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, DetailedViewScreen::class.java)
             startActivity(intent)
 
-            intent.putExtra("Song Title",songTitleText.text.toString())
-            intent.putExtra("Artist Name",artistNameText.text.toString())
+            intent.putExtra("SongTitle",songTitleText.text.toString())
+            intent.putExtra("ArtistName",artistNameText.text.toString())
             intent.putExtra("Comments",commentsText.text.toString())
             intent.putExtra("Rating",ratingTextNumber.text.toString())
         }

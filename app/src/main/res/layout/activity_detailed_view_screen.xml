@@ -5,30 +5,78 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7236AB"
     tools:context=".DetailedViewScreen">
-
-    <TextView
-        android:id="@+id/displaytextView"
-        android:layout_width="269dp"
-        android:layout_height="373dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="259dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="99dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="412dp"
         android:layout_height="91dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="166dp"
+        android:background="@drawable/practicum"
         android:text="Song Details"
-        app:layout_constraintBottom_toTopOf="@+id/displaytextView"
+        android:textAlignment="center"
+        android:textColor="#FDFCFC"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="111dp"
+        android:layout_marginEnd="111dp"
+        android:layout_marginBottom="51dp"
+        android:backgroundTint="#39B429"
+        android:text="Return to Main Screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/songsDisplayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="57dp"
+        android:backgroundTint="#39B429"
+        android:text="Display All Songs"
+        app:layout_constraintBottom_toTopOf="@+id/returnButton"
+        app:layout_constraintEnd_toStartOf="@+id/averageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/displayTextView" />
+
+    <Button
+        android:id="@+id/averageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="#39B429"
+        android:text="Average Rating for songs"
+        app:layout_constraintBottom_toTopOf="@+id/returnButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/songsDisplayButton"
+        app:layout_constraintTop_toBottomOf="@+id/displayTextView" />
+
+    <TextView
+        android:id="@+id/displayTextView"
+        android:layout_width="378dp"
+        android:layout_height="404dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="18dp"
+        android:textColor="#FDFCFC"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/songsDisplayButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

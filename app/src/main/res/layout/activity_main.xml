@@ -5,4 +5,127 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" />
+    android:background="#7236AB"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="355dp"
+        android:backgroundTint="#39B429"
+        android:text="Add to Playlist"
+        app:layout_constraintBottom_toTopOf="@+id/songDetailsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/exitAppButton"
+        android:layout_width="107dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="597dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#39B429"
+        android:text="Exit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="413dp"
+        android:layout_height="108dp"
+        android:layout_marginBottom="489dp"
+        android:background="@drawable/practicum"
+        android:text="Welcome To Songs4You!"
+        android:textAlignment="center"
+        android:textColor="#FDFCFC"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/exitAppButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/songDetailsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="418dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="23dp"
+        android:backgroundTint="#39B429"
+        android:text="Song Details"
+        app:layout_constraintBottom_toTopOf="@+id/exitAppButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/songTitleTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="1dp"
+        android:ems="10"
+        android:hint="Enter Song Title"
+        android:inputType="text"
+        android:textColor="#070707"
+        app:layout_constraintBottom_toTopOf="@+id/artistNameTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addButton" />
+
+    <EditText
+        android:id="@+id/artistNameTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:hint="Enter Artist Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ratingTextNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songTitleTextText" />
+
+    <EditText
+        android:id="@+id/ratingTextNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginEnd="100dp"
+        android:ems="10"
+        android:hint="Enter Rating out of 5"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/commentsTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artistNameTextText" />
+
+    <EditText
+        android:id="@+id/commentsTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="102dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="63dp"
+        android:ems="10"
+        android:hint="Enter comments(e.g. rap, Dance song, Love song, etc.)"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/songDetailsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingTextNumber" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

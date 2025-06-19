@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
@@ -21,18 +22,19 @@ class DetailedViewScreen : AppCompatActivity() {
 
 
 
-
+//declaring components used in UI to be used in code
         val songsButton = findViewById<Button>(R.id.songsDisplayButton)
         val returnButton = findViewById<Button>(R.id.returnButton)
         val averageButton = findViewById<Button>(R.id.averageButton)
 
-
+//Opening the add button to have code inserted to perform actions when clicked
         averageButton.setOnClickListener {
-
+            Toast.makeText(this@DetailedViewScreen,
+                "Button clicked", Toast.LENGTH_LONG).show()
 
         }
 
-
+//Opening the add button to have code inserted to perform actions when clicked
         songsButton?.setOnClickListener {
             val bundle: Bundle? = intent.extras
 
@@ -52,7 +54,7 @@ class DetailedViewScreen : AppCompatActivity() {
         }
 
 
-
+//Opening the add button to have code inserted to perform actions when clicked
         returnButton?.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
